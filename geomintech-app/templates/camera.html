@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>GEOMINTECH Camera</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <div id="layout">
+    <!-- Kiri Atas: Peta -->
+    <div id="map"></div>
+
+    <!-- Kiri Bawah: Kompas -->
+    <div id="compass">
+      <img id="compass-img" src="/static/images/compass.png" alt="Compass" width="150">
+      <p><span id="heading">0</span>°</p>
+    </div>
+
+    <!-- Kanan Atas: Info Data -->
+    <div id="info">
+      <p><strong>Masa:</strong> <span id="time"></span></p>
+      <p><strong>Tarikh:</strong> <span id="date"></span></p>
+      <p><strong>Lokasi:</strong> <span id="location"></span></p>
+      <p><strong>Koordinat:</strong> <span id="coords"></span></p>
+      <p><strong>Strike:</strong> <span id="strike">-</span>°</p>
+      <p><strong>Dip:</strong> <span id="dip">-</span>°</p>
+    </div>
+
+    <!-- Tengah: Kamera -->
+    <div id="camera-container">
+      <video id="video" autoplay playsinline></video>
+      <button id="capture">Take a Picture</button>
+      <canvas id="canvas" style="display:none;"></canvas>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

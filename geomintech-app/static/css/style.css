@@ -1,0 +1,74 @@
+body.welcome {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.title-container marquee {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.start-button {
+  font-size: 20px;
+  padding: 12px 30px;
+  margin-top: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover {
+  background-color: #cccccc;
+}
+
+#layout {
+  display: grid;
+  grid-template-areas:
+    "map info"
+    "compass camera";
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+#map {
+  grid-area: map;
+  height: 300px;
+  width: 100%;
+  border: 2px solid white;
+}
+
+#compass {
+  grid-area: compass;
+  text-align: center;
+}
+
+#info {
+  grid-area: info;
+  color: white;
+  font-size: 16px;
+}
+
+#camera-container {
+  grid-area: camera;
+  position: relative;
+  text-align: center;
+}
+
+#video {
+  width: 100%;
+  max-height: 300px;
+  border: 2px solid white;
+}
+
+#capture {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
